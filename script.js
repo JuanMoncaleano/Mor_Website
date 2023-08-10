@@ -1,58 +1,54 @@
-var map = L.map("map").setView([43.7, -79.42], 13);
+const map = L.map("map").setView([43.7, -79.42], 13);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-// Define the cities, coordinates, and images
-var cities = [
+const createCityContent = (imageName) => `
+  <a href="${imageName}.jpg" target="_blank">
+    <img src="Pics/${imageName}.jpg" width="200px">
+  </a>`;
+
+const cities = [
   {
     name: "CN_Tower",
     coordinates: [43.6426, -79.3871],
-    content:
-      '<a href="cn_tower.jpg" target="_blank"><img src="Pics/cn_tower.jpg" width="200px"></a>',
+    content: createCityContent("cn_tower"),
   },
   {
     name: "Blue_Mountain",
     coordinates: [44.5011, -80.3161],
-    content:
-      '<a href="Blue_Mountain.jpg" target="_blank"><img src="Pics/Blue_Mountain.jpg" width="200px"></a>',
+    content: createCityContent("Blue_Mountain"),
   },
   {
     name: "Bogota",
     coordinates: [4.711, -74.0721],
-    content:
-      '<a href="Bogota.jpg" target="_blank"><img src="Pics/Bogota.jpg" width="200px"></a>',
+    content: createCityContent("Bogota"),
   },
   {
     name: "Butterfly",
     coordinates: [43.813, -79.3198],
-    content:
-      '<a href="Butterfly.jpg" target="_blank"><img src="Pics/Butterfly.jpg" width="200px"></a>',
+    content: createCityContent("Butterfly"),
   },
   {
     name: "Cartagena",
     coordinates: [10.3932, -75.4832],
-    content:
-      '<a href="Cartagena.jpg" target="_blank"><img src="Pics/Cartagena.jpg" width="200px"></a>',
+    content: createCityContent("Cartagena"),
   },
   {
     name: "Grand Bend",
     coordinates: [43.313, -81.7562],
-    content:
-      '<a href="Grand_Bend.jpg" target="_blank"><img src="Pics/Grand_Bend.jpg" width="200px"></a>',
+    content: createCityContent("Grand_Bend"),
   },
   {
     name: "Hamilton",
     coordinates: [43.2557, -79.8711],
-    content:
-      '<a href="Hamilton.jpg" target="_blank"><img src="Pics/Hamilton.jpg" width="200px"></a>',
+    content: createCityContent("Hamilton"),
   },
   // Add more cities here...
 ];
 
-// Iterate through the cities and add markers with popups
-cities.forEach(function (city) {
+cities.forEach((city) => {
   L.marker(city.coordinates).addTo(map).bindPopup(city.content);
 });
