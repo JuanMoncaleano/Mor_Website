@@ -35,7 +35,7 @@ var cities = [
     name: "Cartagena",
     coordinates: [10.3932, -75.4832],
     content:
-      '<a href="Cartagena.jpg" target="_blank"><img src="Pics/Catagena.jpg" width="200px"></a>',
+      '<a href="Cartagena.jpg" target="_blank"><img src="Pics/Cartagena.jpg" width="200px"></a>',
   },
   {
     name: "Grand Bend",
