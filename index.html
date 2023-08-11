@@ -21,7 +21,7 @@
         }
          h1 {
             position: absolute;
-            top: 10%;
+            top: 5%;
             left: 50%;
             transform: translate(-50%, -50%);
             margin: 0;
@@ -33,16 +33,58 @@
             text-align: center;
             z-index: 1000;
         }
-        
+        .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+        background: black;
+        color: white;}
+         #password-prompt {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 1000;
+      }
+
+      #password-prompt button {
+        padding: 15px 30px;
+        font-size: 18px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      #password-prompt button:hover {
+        background-color: #45a049;}
     </style>
   </head>
   <body>
+      <div id="password-prompt">
+      <button onclick="askPassword()">ENTER THIS COOL WEBSITE</button>
+    </div>
+    <div id="map" style="display: none;">
+      <h1>Viajando con mi amor</h1>
+    </div>
      <div id="map">
         <h1>    Viajando con mi amor </h1>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="script.js"></script>
+    <script>
+    function askPassword() {
+      var password = prompt("B__");
+      if (password && password.toLowerCase() === "bc") {
+        document.getElementById('password-prompt').style.display = 'none';
+        document.getElementById('map').style.display = 'block';
+        map.invalidateSize(); 
+      } else {
+        alert("Incorrect answer. Please try again.");
+      }
+    }
+    </script>
     
     <!-- Link to your JavaScript file -->
   </body>
-</html>
+</html>s

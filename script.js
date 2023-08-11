@@ -1,4 +1,4 @@
-const map = L.map("map").setView([43.7, -79.42], 13);
+const map = L.map("map").setView([25.1304, -50.3468], 4);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
@@ -6,9 +6,11 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 const createCityContent = (imageName) => `
-  <a href="${imageName}.jpg" target="_blank">
-    <img src="Pics/${imageName}.jpg" width="200px">
-  </a>`;
+  <div style="width: 4 se00px;">
+    <a href="${imageName}.jpg" target="_blank">
+      <img src="Pics/${imageName}.jpg" width="400px">
+    </a>
+  </div>`;
 
 const cities = [
   {
@@ -58,17 +60,17 @@ const cities = [
   },
   {
     name: "Niagara",
-    coordinates: [43.0896, -79.0849],
+    coordinates: [43.0924, -79.0717],
     content: createCityContent("Niagara"),
   },
   {
     name: "Ripleys",
-    coordinates: [43.6422, -79.3866],
+    coordinates: [43.6422, -79.4866],
     content: createCityContent("Ripleys"),
   },
   {
     name: "WaterPark",
-    coordinates: [43.0924, -79.0717],
+    coordinates: [43.0356, -79.0849],
     content: createCityContent("Water_Park"),
   },
 
@@ -76,5 +78,6 @@ const cities = [
 ];
 
 cities.forEach((city) => {
-  L.marker(city.coordinates).addTo(map).bindPopup(city.content);
+  const popup = L.popup({ maxWidth: 400 }).setContent(city.content);
+  L.marker(city.coordinates).addTo(map).bindPopup(popup);
 });
