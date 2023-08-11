@@ -79,3 +79,66 @@ cities.forEach((city) => {
   const popup = L.popup({ maxWidth: 400 }).setContent(city.content);
   L.marker(city.coordinates).addTo(map).bindPopup(popup);
 });
+
+var words = ["bomboclat", "jazar", "mamahuevo"];
+var currentWord = "";
+var currentGuess = "";
+var attemptsLeft = 0;
+
+function startGame() {
+  var randomIndex = Math.floor(Math.random() * words.length);
+  currentWord = words[randomIndex];
+  currentGuess = "_".repeat(currentWord.length);
+  attemptsLeft = 6;
+  document.getElementById("word-to-guess").innerText = currentGuess;
+  document.getElementById("attempts-left").innerText =
+    "Attempts left: " + attemptsLeft;
+  document.getElementById("message").innerText = "Type a letter to guess!";
+}
+
+document.addEventListener("keydown", function (e) {
+  if (attemptsLeft <= 0 || currentGuess.indexOf("_") === -1) return;
+
+  var letter = e.key.toLowerCase();
+  if (letter.length !== 1 || !/[a-z]/.test(letter)) return;
+
+  var newGuess = "";
+  var correctGuess = false;
+
+  for (var i = 0; i < currentWord.length; i++) {
+    if (currentWord[i] === letter) {
+      newGuess += letter;
+      correctGuess = true;
+    } else {
+      newGuess += currentGuess[i];
+    }
+  }
+
+  if (!correctGuess) {
+    attemptsLeft--;
+    document.getElementById("attempts-left").innerText =
+      "Attempts left: " + attemptsLeft;
+    if (attemptsLeft === 0) {
+      document.getElementById("message").innerText =
+        "Another day another L! The word was: " + currentWord;
+      return;
+    }
+  } else {
+    currentGuess = newGuess;
+    document.getElementById("word-to-guess").innerText = currentGuess;
+    if (currentGuess.indexOf("_") === -1) {
+      document.getElementById("message").innerText = "YESSIR! You got it!";
+    }
+  }
+});
+
+function askPassword() {
+  var password = prompt("B__");
+  if (password && password.toLowerCase() === "bc") {
+    document.getElementById("password-prompt").style.display = "none";
+    document.getElementById("map").style.display = "block";
+    map.invalidateSize();
+  } else {
+    alert("Not today sapo.");
+  }
+}

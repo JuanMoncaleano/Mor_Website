@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Viajando vamos con mi amor</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viajando vamos con mi amor</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     />
+
     <style>
       body,
       html {
         height: 100%;
         margin: 0;
       }
-      body#password-page {
-        background-color: black;
+      #password-page {
+        background-color: rgb(0, 0, 0);
       }
       #map {
         width: 100%;
@@ -72,16 +73,35 @@
         left: 30px;
         bottom: 30px;
       }
+      #hangman-game {
+        color: white;
+        position: absolute;
+        top: 60%;
+        left: -20%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      #word-to-guess,
+      #attempts-left,
+      #message {
+        font-size: 18px;
+      }
     </style>
   </head>
   <body id="password-page">
     <audio id="background-music" loop controls>
       <source src="Music/A_whole_new_world.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
+      Sucks to suck, it won't load.
     </audio>
     <div id="password-prompt">
       <img src="Pics/Squirrel.jpeg" alt="Your description" id="prompt-image" />
       <button onclick="askPassword()">ENTER THIS COOL WEBSITE</button>
+      <div id="hangman-game">
+        <p id="word-to-guess"></p>
+        <p id="attempts-left"></p>
+        <p id="message"></p>
+        <button onclick="startGame()">START HANGMAN GAME</button>
+      </div>
     </div>
     <div id="map" style="display: none">
       <h1>Viajando con mi amor</h1>
