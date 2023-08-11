@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Viajando Vamos con mi amor</title>
+    <title>Viajando vamos con mi amor</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      
     />
-        <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
-        #map {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-         h1 {
-            position: absolute;
-            top: 5%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            margin: 0;
-            padding: 10px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 5px;
-            font-family: 'Arial', sans-serif;
-            font-weight: bold;
-            text-align: center;
-            z-index: 1000;
-        }
-        .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-        background: black;
-        color: white;}
-         #password-prompt {
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+      body#password-page {
+        background-color: black;
+      }
+      #map {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      h1 {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 10px;
+        border-radius: 5px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        background: none;
+        z-index: 1000;
+      }
+      .leaflet-popup-content-wrapper,
+      .leaflet-popup-tip {
+        background: rgb(219, 211, 211);
+        color: white;
+      }
+      #password-prompt {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -44,47 +50,55 @@
         text-align: center;
         z-index: 1000;
       }
-
+      #prompt-image {
+        width: 500px;
+        margin-bottom: 50px;
+      }
       #password-prompt button {
         padding: 15px 30px;
         font-size: 18px;
-        background-color: #4CAF50;
+        background-color: #9e4caf;
         color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s;
       }
-
       #password-prompt button:hover {
-        background-color: #45a049;}
+        background-color: #45a049;
+      }
+      #background-music {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+      }
     </style>
   </head>
-  <body>
-      <div id="password-prompt">
+  <body id="password-page">
+    <audio id="background-music" loop controls>
+      <source src="Music/A_whole_new_world.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <div id="password-prompt">
+      <img src="Pics/Squirrel.jpeg" alt="Your description" id="prompt-image" />
       <button onclick="askPassword()">ENTER THIS COOL WEBSITE</button>
     </div>
-    <div id="map" style="display: none;">
+    <div id="map" style="display: none">
       <h1>Viajando con mi amor</h1>
     </div>
-     <div id="map">
-        <h1>    Viajando con mi amor </h1>
-
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="script.js"></script>
     <script>
-    function askPassword() {
-      var password = prompt("B__");
-      if (password && password.toLowerCase() === "bc") {
-        document.getElementById('password-prompt').style.display = 'none';
-        document.getElementById('map').style.display = 'block';
-        map.invalidateSize(); 
-      } else {
-        alert("Incorrect answer. Please try again.");
+      function askPassword() {
+        var password = prompt("B__");
+        if (password && password.toLowerCase() === "bc") {
+          document.getElementById("password-prompt").style.display = "none";
+          document.getElementById("map").style.display = "block";
+          map.invalidateSize();
+        } else {
+          alert("Not today sapo.");
+        }
       }
-    }
     </script>
-    
-    <!-- Link to your JavaScript file -->
   </body>
-</html>s
+</html>

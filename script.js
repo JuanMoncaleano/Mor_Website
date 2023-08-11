@@ -6,7 +6,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 const createCityContent = (imageName) => `
-  <div style="width: 4 se00px;">
+  <div style="width: 400px;">
     <a href="${imageName}.jpg" target="_blank">
       <img src="Pics/${imageName}.jpg" width="400px">
     </a>
@@ -73,8 +73,6 @@ const cities = [
     coordinates: [43.0356, -79.0849],
     content: createCityContent("Water_Park"),
   },
-
-  // Add more cities here...
 ];
 
 cities.forEach((city) => {
