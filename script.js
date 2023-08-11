@@ -68,7 +68,7 @@ const cities = [
   },
   {
     name: "WaterPark",
-    coordinates: [43.6422, -79.3866],
+    coordinates: [43.0924, -79.0717],
     content: createCityContent("Water_Park"),
   },
 
