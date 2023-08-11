@@ -12,11 +12,6 @@ const createCityContent = (imageName) => `
 
 const cities = [
   {
-    name: "CN_Tower",
-    coordinates: [43.6426, -79.3871],
-    content: createCityContent("cn_tower"),
-  },
-  {
     name: "Blue_Mountain",
     coordinates: [44.5011, -80.3161],
     content: createCityContent("Blue_Mountain"),
@@ -27,9 +22,19 @@ const cities = [
     content: createCityContent("Bogota"),
   },
   {
+    name: "Casa",
+    coordinates: [43.1249, -79.8113],
+    content: createCityContent("Casa"),
+  },
+  {
     name: "Cartagena",
     coordinates: [10.3932, -75.4832],
     content: createCityContent("Cartagena"),
+  },
+  {
+    name: "CN_Tower",
+    coordinates: [43.6426, -79.3871],
+    content: createCityContent("cn_tower"),
   },
   {
     name: "Grand Bend",
@@ -42,15 +47,31 @@ const cities = [
     content: createCityContent("Hamilton"),
   },
   {
-    name: "Casa",
-    coordinates: [43.1249, -79.8113],
-    content: createCityContent("casa"),
+    name: "Medellin",
+    coordinates: [6.2476, -75.5658],
+    content: createCityContent("Medellin"),
+  },
+  {
+    name: "Muskoka",
+    coordinates: [45.1841, -79.4085],
+    content: createCityContent("Muskoka"),
   },
   {
     name: "Niagara",
     coordinates: [43.0896, -79.0849],
-    content: createCityContent("niagara"),
+    content: createCityContent("Niagara"),
   },
+  {
+    name: "Ripleys",
+    coordinates: [43.6422, -79.3866],
+    content: createCityContent("Ripleys"),
+  },
+  {
+    name: "WaterPark",
+    coordinates: [43.6422, -79.3866],
+    content: createCityContent("Water_Park"),
+  },
+
   // Add more cities here...
 ];
 
