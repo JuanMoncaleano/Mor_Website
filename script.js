@@ -27,11 +27,6 @@ const cities = [
     content: createCityContent("Bogota"),
   },
   {
-    name: "Butterfly",
-    coordinates: [43.813, -79.3198],
-    content: createCityContent("Butterfly"),
-  },
-  {
     name: "Cartagena",
     coordinates: [10.3932, -75.4832],
     content: createCityContent("Cartagena"),
@@ -45,6 +40,16 @@ const cities = [
     name: "Hamilton",
     coordinates: [43.2557, -79.8711],
     content: createCityContent("Hamilton"),
+  },
+  {
+    name: "Casa",
+    coordinates: [43.1249, -79.8113],
+    content: createCityContent("casa"),
+  },
+  {
+    name: "Niagara",
+    coordinates: [43.0896, -79.0849],
+    content: createCityContent("niagara"),
   },
   // Add more cities here...
 ];
