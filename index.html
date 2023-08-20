@@ -8,15 +8,19 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="static/styles.css" />
   </head>
   <body id="password-page">
     <audio id="background-music" loop controls>
-      <source src="Music/A_whole_new_world.mp3" type="audio/mpeg" />
+      <source src="static/Music/A_whole_new_world.mp3" type="audio/mpeg" />
       Sucks to suck, it won't load.
     </audio>
     <div id="password-prompt">
-      <img src="Pics/Squirrel.jpeg" alt="Your description" id="prompt-image" />
+      <img
+        src="Pics/Squirrel.jpeg"
+        alt="Que vamos a hacer hoy pinky?"
+        id="prompt-image"
+      />
       <button onclick="askPassword()">ENTER THIS COOL WEBSITE</button>
       <div id="hangman-game">
         <p id="word-to-guess"></p>
@@ -29,7 +33,7 @@
       <h1>Viajando con mi amor</h1>
     </div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="script.js"></script>
+    <script src="static/script.js"></script>
     <script>
       function askPassword() {
         var password = prompt("B_ _");
