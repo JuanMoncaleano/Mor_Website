@@ -1,5 +1,4 @@
-const map = L.map("map").setView([25.1304, -50.3468], 4);
-
+var map = new L.Map("map").setView([25.1304, -50.3468], 4);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -142,3 +141,9 @@ function askPassword() {
     alert("Not today sapo.");
   }
 }
+var worldMiniMap = L.control
+  .worldMiniMap({
+    position: "topright",
+    style: { opacity: 0.9, borderRadius: "0px", backgroundColor: "lightblue" },
+  })
+  .addTo(map);

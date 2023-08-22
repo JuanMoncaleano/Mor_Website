@@ -4,7 +4,7 @@ html {
   margin: 0;
 }
 #password-page {
-  background-color: rgb(0, 0, 0);
+  background-color: #06142e;
 }
 #map {
   width: 100%;
@@ -28,7 +28,7 @@ h1 {
 }
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-  background: rgb(219, 211, 211);
+  background: #fbe4d8;
   color: white;
 }
 #password-prompt {
@@ -43,6 +43,7 @@ h1 {
   width: 500px;
   margin-bottom: 50px;
   transition: all 0.3s ease;
+  border: 5px solid #522b5b;
 }
 #prompt-image:hover {
   width: 600px;
@@ -50,15 +51,17 @@ h1 {
 #password-prompt button {
   padding: 15px 30px;
   font-size: 18px;
-  background-color: #9e4caf;
-  color: white;
+  background-color: #473e66;
+  color: #fbe4d8;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 #password-prompt button:hover {
-  background-color: #5c0731;
+  background-color: #522b5b;
+  box-shadow: 0 0 5px #fbe4d8, 0 0 25px #fbe4d8, 0 0 50px #fbe4d8,
+    0 0 100px #fbe4d8;
 }
 #background-music {
   position: absolute;
@@ -77,4 +80,8 @@ h1 {
 #attempts-left,
 #message {
   font-size: 18px;
+}
+.leaflet-control-worldMiniMap {
+  width: 100px; /* Set the desired width */
+  height: 100px; /* Set the desired height */
 }
