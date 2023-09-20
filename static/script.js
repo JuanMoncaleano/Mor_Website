@@ -141,9 +141,3 @@ function askPassword() {
     alert("Not today sapo.");
   }
 }
-var worldMiniMap = L.control
-  .worldMiniMap({
-    position: "topright",
-    style: { opacity: 0.9, borderRadius: "0px", backgroundColor: "lightblue" },
-  })
-  .addTo(map);

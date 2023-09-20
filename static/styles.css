@@ -81,7 +81,3 @@ h1 {
 #message {
   font-size: 18px;
 }
-.leaflet-control-worldMiniMap {
-  width: 100px; /* Set the desired width */
-  height: 100px; /* Set the desired height */
-}
