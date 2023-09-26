@@ -24,7 +24,7 @@ const cities = [
   },
   {
     name: "Casa",
-    coordinates: [43.1249, -79.8113],
+    coordinates: [43.12, -79.81],
     content: createCityContent("Casa"),
   },
   {
@@ -71,6 +71,16 @@ const cities = [
     name: "WaterPark",
     coordinates: [43.0356, -79.0849],
     content: createCityContent("Water_Park"),
+  },
+  {
+    name: "Grotto",
+    coordinates: [45.2452, -81.5243],
+    content: createCityContent("Babe_Grotto"),
+  },
+  {
+    name: "Lion's Head",
+    coordinates: [44.987148, -81.254608],
+    content: createCityContent("Gang_BP"),
   },
 ];
 
