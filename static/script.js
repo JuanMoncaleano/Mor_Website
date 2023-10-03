@@ -43,11 +43,6 @@ const cities = [
     content: createCityContent("Grand_Bend"),
   },
   {
-    name: "Hamilton",
-    coordinates: [43.2557, -79.8711],
-    content: createCityContent("Hamilton"),
-  },
-  {
     name: "Medellin",
     coordinates: [6.2476, -75.5658],
     content: createCityContent("Medellin"),
@@ -81,6 +76,11 @@ const cities = [
     name: "Lion's Head",
     coordinates: [44.987148, -81.254608],
     content: createCityContent("Gang_BP"),
+  },
+  {
+    name: "Graduation Juan",
+    coordinates: [43.7282, -79.378],
+    content: createCityContent("Grad_Juan"),
   },
 ];
 
