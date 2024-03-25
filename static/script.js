@@ -82,6 +82,26 @@ const cities = [
     coordinates: [43.7282, -79.378],
     content: createCityContent("Grad_Juan"),
   },
+  {
+    name: "Volca Arenal",
+    coordinates: [10.46333, -84.70333],
+    content: createCityContent("Fortuna"),
+  },
+  {
+    name: "Tour de Cacao",
+    coordinates: [10.40050226418354, -84.57133113861823],
+    content: createCityContent("Cacao"),
+  },
+  {
+    name: "Puente colgante",
+    coordinates: [10.463525549479831, -84.70331046640376],
+    content: createCityContent("Bridge"),
+  },
+  {
+    name: "Pinto",
+    coordinates: [10.49844045020927, -84.71066369259368],
+    content: createCityContent("Pinto"),
+  },
 ];
 
 cities.forEach((city) => {
