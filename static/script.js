@@ -94,7 +94,7 @@ const cities = [
   },
   {
     name: "Puente colgante",
-    coordinates: [10.463525549479831, -84.70331046640376],
+    coordinates: [10.461, -84.705],
     content: createCityContent("Bridge"),
   },
   {
