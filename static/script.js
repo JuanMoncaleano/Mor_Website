@@ -84,7 +84,7 @@ const cities = [
   },
   {
     name: "Volca Arenal",
-    coordinates: [10.16333, -84.00333],
+    coordinates: [10.46433, -84.70343],
     content: createCityContent("Fortuna"),
   },
   {
@@ -94,7 +94,7 @@ const cities = [
   },
   {
     name: "Puente colgante",
-    coordinates: [10.961, -84.905],
+    coordinates: [10.46, -84.706],
     content: createCityContent("Bridge"),
   },
   {
