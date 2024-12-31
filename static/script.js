@@ -1,9 +1,13 @@
+// -------------- START OF script.js -------------- //
+
+// Initialize the map
 var map = new L.Map("map").setView([25.1304, -50.3468], 4);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
+// Helper function to create popup content
 const createCityContent = (imageName) => `
   <div style="width: 400px;">
     <a href="${imageName}.jpg" target="_blank">
@@ -11,6 +15,7 @@ const createCityContent = (imageName) => `
     </a>
   </div>`;
 
+// Cities data
 const cities = [
   {
     name: "Blue_Mountain",
@@ -104,11 +109,13 @@ const cities = [
   },
 ];
 
+// Place markers & popups
 cities.forEach((city) => {
   const popup = L.popup({ maxWidth: 400 }).setContent(city.content);
   L.marker(city.coordinates).addTo(map).bindPopup(popup);
 });
 
+// Hangman Game
 var words = ["bomboclat", "jazar", "mamahuevo"];
 var currentWord = "";
 var currentGuess = "";
@@ -159,15 +166,6 @@ document.addEventListener("keydown", function (e) {
       document.getElementById("message").innerText = "YESSIR! You got it!";
     }
   }
-});
-
-function askPassword() {
-  var password = prompt("B__");
-  if (password && password.toLowerCase() === "bc") {
-    document.getElementById("password-prompt").style.display = "none";
-    document.getElementById("map").style.display = "block";
-    map.invalidateSize();
-  } else {
-    alert("Not today sapo.");
-  }
 }
+
+// -------------- END OF script.js -------------- //
