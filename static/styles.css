@@ -1,16 +1,17 @@
+/* -------------- START OF styles.css -------------- */
+
 body,
 html {
   height: 100%;
   margin: 0;
 }
-#password-page {
-  background-color: #06142e;
-}
+
 #map {
   width: 100%;
   height: 100%;
   position: relative;
 }
+
 h1 {
   position: absolute;
   top: 5%;
@@ -26,48 +27,19 @@ h1 {
   background: none;
   z-index: 1000;
 }
+
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
   background: #fbe4d8;
   color: white;
 }
-#password-prompt {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 1000;
-}
-#prompt-image {
-  width: 500px;
-  margin-bottom: 50px;
-  transition: all 0.3s ease;
-  border: 5px solid #522b5b;
-}
-#prompt-image:hover {
-  width: 600px;
-}
-#password-prompt button {
-  padding: 15px 30px;
-  font-size: 18px;
-  background-color: #473e66;
-  color: #fbe4d8;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-#password-prompt button:hover {
-  background-color: #522b5b;
-  box-shadow: 0 0 5px #fbe4d8, 0 0 25px #fbe4d8, 0 0 50px #fbe4d8,
-    0 0 100px #fbe4d8;
-}
+
 #background-music {
   position: absolute;
   left: 30px;
   bottom: 30px;
 }
+
 #hangman-game {
   color: white;
   position: absolute;
@@ -76,8 +48,11 @@ h1 {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
 #word-to-guess,
 #attempts-left,
 #message {
   font-size: 18px;
 }
+
+/* -------------- END OF styles.css -------------- */
