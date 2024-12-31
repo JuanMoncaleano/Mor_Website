@@ -1,59 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+
+    <!-- IMPORTANT for Mobile Devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Viajando vamos con mi amor</title>
+
+    <title>Map Fiancee</title>
+
+    <!-- Leaflet CSS -->
     <link
       rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-sA+eNwp2e7i2q7HyfCUkNUGa1Hoh7dYzjfnxv6f1MsI="
+      crossorigin=""
     />
-    <link rel="stylesheet" href="static/styles.css" />
-  </head>
-  <body id="password-page">
-    <audio id="background-music" loop controls>
-      <source
-        src="../Mor_Website/Music/A_whole_new_world.mp3"
-        type="audio/mpeg"
-      />
-      Sucks to suck, it won't load.
-    </audio>
-    <div id="password-prompt">
-      <img
-        src="Pics/Squirrel.jpeg"
-        alt="Que vamos a hacer hoy pinky?"
-        id="prompt-image"
-      />
-      <button onclick="askPassword()">ENTER THIS COOL WEBSITE</button>
-      <div id="hangman-game">
-        <p id="word-to-guess"></p>
-        <p id="attempts-left"></p>
-        <p id="message"></p>
-        <button onclick="startGame()">START HANGMAN GAME</button>
-      </div>
-    </div>
-    <div id="map" style="display: none">
-      <h1>Viajando con mi amor</h1>
-    </div>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="static/script.js"></script>
-    <!-- MiniMap library -->
+
+    <!-- Your custom CSS (styles.css) -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Leaflet JS -->
     <script
-      src="https://cdn.jsdelivr.net/gh/maneoverland/leaflet.WorldMiniMap@1.0.0/dist/Control.WorldMiniMap.js"
-      integrity="sha512-PFw8St3qenU1/dmwCfiYYN/bRcqY1p3+sBATR+rZ6622eyXOk/8izVtlmm/k8qW7KbRIJsku838WCV5LMs6FCg=="
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-QVjXkHKr4o/TyCXDdNYJZeO3VChAC0B6qa2WeAW3Sl8="
       crossorigin=""
     ></script>
-    <script>
-      function askPassword() {
-        var password = prompt("B_ _");
-        if (password && password.toLowerCase() === "bc") {
-          document.getElementById("password-prompt").style.display = "none";
-          document.getElementById("map").style.display = "block";
-          map.invalidateSize();
-        } else {
-          alert("Not today sapo.");
-        }
-      }
-    </script>
+
+    <!-- Your JavaScript (script.js) -->
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- MAP CONTAINER -->
+    <div id="map"></div>
+
+    <!-- TITLE (if you want it) -->
+    <h1>Your Map Title</h1>
+
+    <!-- HANGMAN GAME UI -->
+    <div id="hangman-game">
+      <div id="word-to-guess"></div>
+      <div id="attempts-left"></div>
+      <div id="message"></div>
+      <button onclick="startGame()">Start Hangman Game</button>
+    </div>
   </body>
 </html>
