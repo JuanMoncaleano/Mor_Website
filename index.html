@@ -1,48 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8" />
 
-    <!-- IMPORTANT for Mobile Devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- IMPORTANT for Mobile Devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Map Fiancee</title>
+  <title>Viajando con mi amor</title>
 
-    <!-- Leaflet CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-      integrity="sha256-sA+eNwp2e7i2q7HyfCUkNUGa1Hoh7dYzjfnxv6f1MsI="
-      crossorigin=""
-    />
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-sA+eNwp2e7i2q7HyfCUkNUGa1Hoh7dYzjfnxv6f1MsI="
+    crossorigin=""
+  />
 
-    <!-- Your custom CSS (styles.css) -->
-    <link rel="stylesheet" href="styles.css" />
+  <!-- Your custom CSS (styles.css) -->
+  <link rel="stylesheet" href="styles.css" />
 
-    <!-- Leaflet JS -->
-    <script
-      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-      integrity="sha256-QVjXkHKr4o/TyCXDdNYJZeO3VChAC0B6qa2WeAW3Sl8="
-      crossorigin=""
-    ></script>
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-QVjXkHKr4o/TyCXDdNYJZeO3VChAC0B6qa2WeAW3Sl8="
+    crossorigin=""
+  ></script>
 
-    <!-- Your JavaScript (script.js) -->
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <!-- MAP CONTAINER -->
-    <div id="map"></div>
-
-    <!-- TITLE (if you want it) -->
-    <h1>Your Map Title</h1>
-
-    <!-- HANGMAN GAME UI -->
-    <div id="hangman-game">
-      <div id="word-to-guess"></div>
-      <div id="attempts-left"></div>
-      <div id="message"></div>
-      <button onclick="startGame()">Start Hangman Game</button>
-    </div>
-  </body>
+  <!-- Minimal map script -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="map"></div>
+</body>
 </html>
